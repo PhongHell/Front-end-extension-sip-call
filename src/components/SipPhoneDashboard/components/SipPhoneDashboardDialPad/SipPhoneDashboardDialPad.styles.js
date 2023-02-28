@@ -19,6 +19,11 @@ export const SipPhoneDashboardDialPadFooter = styled(Box)`
 `;
 
 export const SipPhoneDashboardDialPadHeaderTextField = styled(TextField)`
+    &&& {
+        fieldSet {
+            border-radius: 0;
+        }
+    }
 
 `;
 
@@ -30,6 +35,7 @@ export const SipPhoneDashboardDialPadButtonDial = styled(Button)`
         text-align : center;
         align-items : center;
         border-radius : 5px;
+        font-weight : bold;
     }
 `;
 
@@ -46,6 +52,17 @@ export const SipPhoneDashboardDialPadNumber = styled(Button)`
 `;
 
 export const StyledBackSpaceIcon = styled(KeyboardBackspace)`
-    border : 1px solid black;
     cursor : pointer;
-`
+`;
+
+export const StyledBackSpaceButton = styled(Button)`
+    &&& {
+        text-align : center;
+        align-items : center;
+        border-radius : 0;
+        padding : 0;
+        margin : 0;
+        border : 1px solid black;
+        color : #111111;
+    }
+`;

@@ -9,15 +9,18 @@ import {
     SipPhoneDashboardDialPadLocalPhoneIcon,
     SipPhoneDashboardDialPadNumber,
     SipPhoneDashboardDialPadHeaderTextField,
-    StyledBackSpaceIcon
+    StyledBackSpaceIcon,
+    StyledBackSpaceButton,
 } from "./SipPhoneDashboardDialPad.styles";
+import { Box, FlexBox } from "ui-components"
 
 export const SipPhoneDashboardDialPad = () => {
     const [ phoneNumber, setPhoneNumber ] = useState("");
 
     const onChangePhoneNumber = (event) => {
-        if(validationPhoneNumber.test(event.target.value)){
-            setPhoneNumber(event.target.value);
+        const newPhoneNumber = event?.target?.value?.trim();
+        if(validationPhoneNumber.test(newPhoneNumber)){
+            setPhoneNumber(newPhoneNumber);
             return;
         }
 
@@ -29,20 +32,33 @@ export const SipPhoneDashboardDialPad = () => {
     const onKeypressPhoneNumber = (number) => {
         const newPhoneNumber = `${phoneNumber}${number}`;
         setPhoneNumber(newPhoneNumber);
-    }
+    };
+
+    const onBackSpacePhoneNumber = () => {
+        if(phoneNumber?.length > 0){
+            const newPhoneNumber = phoneNumber?.substring(0, phoneNumber.length - 1);
+            setPhoneNumber(newPhoneNumber);
+        }
+        
+    };
+
     return (
         <SipPhoneDashboardDialPadContainer>
             <SipPhoneDashboardDialPadHeader>
-                <SipPhoneDashboardDialPadHeaderTextField 
-                    size="small" 
-                    fullWidth 
-                    InputProps={{
-                        endAdornment : <StyledBackSpaceIcon />
-                    }}
-                    placeholder="Enter number to dial"
-                    value={phoneNumber}
-                    onChange={onChangePhoneNumber}
-                />
+                <FlexBox>
+                    <Box width={"95%"}>
+                        <SipPhoneDashboardDialPadHeaderTextField 
+                            size="small"
+                            fullWidth
+                            placeholder="Enter number to dial"
+                            value={phoneNumber}
+                            onChange={onChangePhoneNumber}
+                        />
+                    </Box>
+                    <StyledBackSpaceButton onClick={onBackSpacePhoneNumber}>
+                        <StyledBackSpaceIcon />
+                    </StyledBackSpaceButton>
+                </FlexBox>
             </SipPhoneDashboardDialPadHeader>
             <SipPhoneDashboardDialPadBody>
                 {dialPadNumbersData.map((item) => {
