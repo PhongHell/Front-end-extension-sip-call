@@ -1,4 +1,4 @@
-export const dialogNumbersData = [
+export const dialPadNumbersData = [
     {
         label : "1",
         value : "1"
@@ -47,4 +47,6 @@ export const dialogNumbersData = [
         label : "#",
         value : "#"
     },
-]
+];
+
+export const validationPhoneNumber = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/;

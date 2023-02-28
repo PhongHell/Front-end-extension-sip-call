@@ -2,26 +2,27 @@ import styled from "styled-components";
 import { Box, Button, TextField, LocalPhoneIcon } from "@ui-components";
 import KeyboardBackspace from "@mui/icons-material/KeyboardBackspace";
 
-export const SipPhoneDashboardDialogContainer = styled(Box)`
+export const SipPhoneDashboardDialPadContainer = styled(Box)`
     box-shadow : 0px -3px 0px 0px #ff0000;
+    background-color : white;
 `;
 
-export const SipPhoneDashboardDialogHeader = styled(Box)`
+export const SipPhoneDashboardDialPadHeader = styled(Box)`
     border-bottom : 1px solid black;
     padding : 20px 5px;
 `;
 
-export const SipPhoneDashboardDialogBody = styled(Box)`
+export const SipPhoneDashboardDialPadBody = styled(Box)`
 `;
 
-export const SipPhoneDashboardDialogFooter = styled(Box)`
+export const SipPhoneDashboardDialPadFooter = styled(Box)`
 `;
 
-export const SipPhoneDashboardDialogHeaderTextField = styled(TextField)`
+export const SipPhoneDashboardDialPadHeaderTextField = styled(TextField)`
 
 `;
 
-export const SipPhoneDashboardDialogButtonDial = styled(Button)`
+export const SipPhoneDashboardDialPadButtonDial = styled(Button)`
     &&& {
         background-color : #ff0000;
         color : white;
@@ -32,11 +33,11 @@ export const SipPhoneDashboardDialogButtonDial = styled(Button)`
     }
 `;
 
-export const SipPhoneDashboardDialogLocalPhoneIcon = styled(LocalPhoneIcon)`
+export const SipPhoneDashboardDialPadLocalPhoneIcon = styled(LocalPhoneIcon)`
 
 `;
 
-export const SipPhoneDashboardDialogNumber = styled(Button)`
+export const SipPhoneDashboardDialPadNumber = styled(Button)`
    &&& {
     font-weight : bold;
     color : black;

@@ -34,3 +34,8 @@ export const StyledSipPhoneDashboardHeaderRightBar = styled(Box)`
 export const StyledSettingsSuggestIcon = styled(SettingsSuggestIcon)`
     cursor : pointer;
 `;
+
+export const StyledSipPhoneDashboardBody = styled(Box)`
+    padding : 20px 10px 40px 10px;
+    background-color : #d5e4ea;
+`;

@@ -1,1 +1,1 @@
-export { SipPhoneDashboardDialog } from "./SipPhoneDashboardDialog";
+export { SipPhoneDashboardDialPad } from "./SipPhoneDashboardDialPad";

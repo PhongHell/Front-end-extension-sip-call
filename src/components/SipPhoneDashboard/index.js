@@ -1,12 +1,13 @@
 import React from 'react';
-import { SipPhoneDashboardDialog } from './components';
+import { SipPhoneDashboardDialPad } from './components';
 import { 
   StyledSipPhoneDashboardHeader,
   StyledSipPhoneDashboardHeaderTitle,
   StyledAdjustIcon, 
   StyledSipPhoneDashboardHeaderRegisteredContainer, 
   StyledSettingsSuggestIcon,
-  StyledSipPhoneDashboardHeaderRightBar
+  StyledSipPhoneDashboardHeaderRightBar,
+  StyledSipPhoneDashboardBody
 } from "./SipPhoneDashboard.styles";
 
 
@@ -23,7 +24,9 @@ export const SipPhoneDashboard = () => {
           <StyledSettingsSuggestIcon />
         </StyledSipPhoneDashboardHeaderRightBar>
       </StyledSipPhoneDashboardHeader>
-      <SipPhoneDashboardDialog />
+      <StyledSipPhoneDashboardBody>
+        <SipPhoneDashboardDialPad />
+      </StyledSipPhoneDashboardBody>
     </div>
   )
 };
