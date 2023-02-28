@@ -35,6 +35,6 @@ const saveData = async (message) => {
   store.set(storeData)
 }
 
-chrome.runtime.onMessage.addListener(function(message) {
+chrome?.runtime?.onMessage?.addListener(function(message) {
   saveData(message)
 })

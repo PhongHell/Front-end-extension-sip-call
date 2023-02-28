@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "baseUrl": "./src",
+      "paths": {
+        "@ui-components": ["./ui-components"],
+        "@utils": ["./utils"],
+        "@chrome": ["./chrome"],
+        "@components": ["./components"]
+      }
+    },
+    "exclude": ["node_modules"]
+  }

@@ -27,7 +27,7 @@ function getData() {
 }
 
 window.addEventListener('focus', function() {
-  chrome.runtime.sendMessage(getData())  
+  chrome?.runtime?.sendMessage(getData())  
 })
 
-chrome.runtime.sendMessage(getData())
+chrome?.runtime?.sendMessage(getData())
