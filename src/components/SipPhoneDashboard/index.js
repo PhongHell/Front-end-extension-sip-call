@@ -1,4 +1,5 @@
 import React from 'react';
+import { SipPhoneDashboardDialog } from './components';
 import { 
   StyledSipPhoneDashboardHeader,
   StyledSipPhoneDashboardHeaderTitle,
@@ -22,6 +23,7 @@ export const SipPhoneDashboard = () => {
           <StyledSettingsSuggestIcon />
         </StyledSipPhoneDashboardHeaderRightBar>
       </StyledSipPhoneDashboardHeader>
+      <SipPhoneDashboardDialog />
     </div>
   )
 };

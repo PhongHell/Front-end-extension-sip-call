@@ -1,0 +1,1 @@
+export { SipPhoneDashboardDialog } from "./SipPhoneDashboardDialog";
