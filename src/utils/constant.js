@@ -49,4 +49,27 @@ export const dialPadNumbersData = [
     },
 ];
 
+export const sipPhoneSettingDataList = [
+    {
+        label : "Do Not Disturb",
+        optionText : "Enable Do Not Disturb",
+        isChecked : false,
+    },
+    {
+        label : "Auto Answer Incoming Calls",
+        optionText : "Enable Auto Answer",
+        isChecked : false,
+    },
+    {
+        label : "Set Prefix",
+        optionText : "Enter Prefix Value",
+        isChecked : false,
+    },
+    {
+        label : "Call Park",
+        optionText : "Enter Park Code",
+        isChecked : false,
+    }
+]
+
 export const validationPhoneNumber = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/;

@@ -1,12 +1,12 @@
-/* eslint-disable no-undef */
-import React from 'react';
-import { SipPhoneDashboard } from './components';
+import React, { useState } from 'react';
+import { SipPhoneDashboard, SipPhoneSetting } from './components';
 
 function App() {
-
+  const [isOpenSipPhoneSetting, setIsOpenSipPhoneSetting] = useState(false);
   return (
     <div className="App">
-      <SipPhoneDashboard />
+      <SipPhoneDashboard onClickSetting={() => setIsOpenSipPhoneSetting(true)}/>
+      <SipPhoneSetting open={isOpenSipPhoneSetting} handleClose={() => setIsOpenSipPhoneSetting(false)}/>
     </div>
   );
 }

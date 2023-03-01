@@ -7,13 +7,14 @@ import {
   StyledSipPhoneDashboardHeaderRegisteredContainer, 
   StyledSettingsSuggestIcon,
   StyledSipPhoneDashboardHeaderRightBar,
-  StyledSipPhoneDashboardBody
+  StyledSipPhoneDashboardBody,
+  SipPhoneDashboardDashboardWrapper
 } from "./SipPhoneDashboard.styles";
 
 
-export const SipPhoneDashboard = () => {
+export const SipPhoneDashboard = ({ onClickSetting }) => {
   return (
-    <div>
+    <SipPhoneDashboardDashboardWrapper>
       <StyledSipPhoneDashboardHeader>
         <StyledSipPhoneDashboardHeaderTitle>SIP Phone</StyledSipPhoneDashboardHeaderTitle>
         <StyledSipPhoneDashboardHeaderRightBar>
@@ -21,12 +22,12 @@ export const SipPhoneDashboard = () => {
             <StyledAdjustIcon/>
             Registered
           </StyledSipPhoneDashboardHeaderRegisteredContainer>
-          <StyledSettingsSuggestIcon />
+          <StyledSettingsSuggestIcon onClick={onClickSetting}/>
         </StyledSipPhoneDashboardHeaderRightBar>
       </StyledSipPhoneDashboardHeader>
       <StyledSipPhoneDashboardBody>
         <SipPhoneDashboardDialPad />
       </StyledSipPhoneDashboardBody>
-    </div>
+    </SipPhoneDashboardDashboardWrapper>
   )
 };

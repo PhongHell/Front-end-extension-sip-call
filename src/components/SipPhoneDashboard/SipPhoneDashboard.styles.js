@@ -1,6 +1,12 @@
 import styled from "styled-components";
 import { Box, Typography, AdjustIcon, FlexBoxCenter, SettingsSuggestIcon } from "@ui-components";
 
+
+export const SipPhoneDashboardDashboardWrapper= styled(Box)`
+    height : 100%;
+`;
+
+
 export const StyledSipPhoneDashboardHeader = styled(Box)`
     display : flex;
     justify-content : space-between;

@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { Box, Button, TextField, LocalPhoneIcon } from "@ui-components";
-import KeyboardBackspace from "@mui/icons-material/KeyboardBackspace";
+import { Box, Button, TextField, LocalPhoneIcon, KeyboardBackspace } from "@ui-components";
 
 export const SipPhoneDashboardDialPadContainer = styled(Box)`
     box-shadow : 0px -3px 0px 0px #ff0000;
