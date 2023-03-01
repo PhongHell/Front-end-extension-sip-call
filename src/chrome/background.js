@@ -2,7 +2,7 @@
 import { store } from '../utils'
 
 const saveData = async (message) => {
-  const storeData = await store.get()
+  const storeData = await store?.get()
   const name = storeData.name;
   const nameActive = message.nameActive;
   if (name === '' || nameActive === '') return
@@ -24,15 +24,15 @@ const saveData = async (message) => {
   }
 
   if(!storeData.list) storeData.list = []
-  const existItemIndex = storeData.list.findIndex(item => item.pathname === pathname)
+  const existItemIndex = storeData?.list?.findIndex(item => item.pathname === pathname)
 
   if(existItemIndex === -1) {
-    storeData.list.push(newItem)
+    storeData?.list?.push(newItem)
   } else {
-    storeData.list.splice(existItemIndex, 1, newItem)
+    storeData?.list?.splice(existItemIndex, 1, newItem)
   }
 
-  store.set(storeData)
+  store?.set(storeData)
 }
 
 chrome?.runtime?.onMessage?.addListener(function(message) {
